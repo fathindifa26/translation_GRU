@@ -1,0 +1,14 @@
+model:
+  input_dim: 2197  # Sesuaikan dengan ukuran id_vocab Anda nanti
+  output_dim: 2587  # Sesuaikan dengan ukuran en_vocab Anda nanti
+  embedding_dim: 256
+  hidden_dim: 512
+  dropout: 0.5
+training:
+  epochs: 10
+  batch_size: 128
+  teacher_forcing_initial: 0.5
+  teacher_forcing_final: 0.1
+  clip: 1.0
+data:
+  path: "data/indonesia_jawa_dataset"
