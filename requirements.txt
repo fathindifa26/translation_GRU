@@ -2,11 +2,11 @@
 torch==2.0.1  # Atau bisa diganti dengan torch terbaru jika tidak ada alasan khusus
 torchtext==0.15.2  # Versi yang kompatibel dengan torch 2.0.1
 transformers==4.35.0
-datasets==2.14.0
-huggingface-hub>=0.16.4,<0.18
+datasets==2.14.5
+huggingface-hub==0.16.4
 tokenizers==0.14
 torchdata==0.6.1
-tqdm==4.66.1
+tqdm==4.66.3
 numpy==1.26.0
 pyyaml==6.0
 dill==0.3.7

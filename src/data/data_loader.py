@@ -19,18 +19,3 @@ def get_data_loader(dataset, batch_size, pad_index, shuffle=False):
         collate_fn=collate_fn,
         shuffle=shuffle,
     )
-
-# src/data/data_loader.py
-from torch.utils.data import DataLoader
-
-def get_data_loader(dataset, batch_size=32, shuffle=False):
-    return DataLoader(
-        dataset,
-        batch_size=batch_size,
-        shuffle=shuffle,
-        collate_fn=lambda x: {
-            "input_ids": torch.stack([item["input_ids"] for item in x]),
-            "attention_mask": torch.stack([item["attention_mask"] for item in x]),
-            "labels": torch.stack([item["labels"] for item in x])
-        }
-    )

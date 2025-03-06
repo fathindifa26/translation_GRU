@@ -2,7 +2,8 @@
 # src/experiments/train_gru.py
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+# Pastikan src bisa ditemukan
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 import torch
 import torch.optim as optim
@@ -18,7 +19,7 @@ from src.utils.inference import translate_sentence
 from transformers import BertTokenizer
 
 # Load konfigurasi
-with open("../../configs/gru_seq2seq.yaml", "r") as f:
+with open('configs/gru_seq2seq.yaml', "r") as f:
     config = yaml.safe_load(f)
 
 # Device
