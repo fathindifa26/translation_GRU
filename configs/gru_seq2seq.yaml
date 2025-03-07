@@ -1,14 +1,20 @@
 model:
-  input_dim: 2197  # Sesuaikan dengan ukuran id_vocab Anda nanti
-  output_dim: 2587  # Sesuaikan dengan ukuran en_vocab Anda nanti
-  embedding_dim: 256
-  hidden_dim: 512
-  dropout: 0.5
+  input_dim: null  # Akan diisi secara dinamis berdasarkan vocab
+  output_dim: null  # Akan diisi secara dinamis berdasarkan vocab
+  embedding_dim: 512
+  hidden_dim: 1024
+  dropout: 0.3
+
 training:
-  epochs: 10
   batch_size: 128
+  clip: 1.0
   teacher_forcing_initial: 0.5
   teacher_forcing_final: 0.1
-  clip: 1.0
+  epochs: 10
+  patience: 5
+  patience_counter: 0
+  checkpoint_path: "checkpoints/gru_model.pt"
+
 data:
-  path: "data/indonesia_jawa_dataset"
+  dataset_path: "../../data/indonesia_jawa_dataset"
+  pad_token: "<pad>"
