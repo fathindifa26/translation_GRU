@@ -5,7 +5,6 @@ import torch
 def translate_sentence(
     sentence,
     model,
-    tokenizer,
     en_vocab,
     id_vocab,
     sos_token="<sos>",
@@ -20,7 +19,6 @@ def translate_sentence(
     Args:
         sentence (str): Kalimat input dalam bahasa Indonesia.
         model (torch.nn.Module): Model terlatih.
-        tokenizer (transformers.BertTokenizer): Tokenizer BERT.
         en_vocab (torchtext.vocab.Vocab): Vocabulary untuk bahasa target (Jawa).
         id_vocab (torchtext.vocab.Vocab): Vocabulary untuk bahasa sumber (Indonesia).
         sos_token (str): Token awal kalimat (default: "<sos>").
@@ -34,9 +32,9 @@ def translate_sentence(
     """
 
     model.eval()
-    
-    # Tokenisasi input
-    tokens = [sos_token] + tokenizer.tokenize(sentence.lower())[:1000] + [eos_token]
+
+    # Tokenisasi manual tanpa tokenizer (menggunakan vocabulary yang sudah dibuat)
+    tokens = [sos_token] + sentence.lower().split()[:1000] + [eos_token]
     numericalized = [id_vocab[token] if token in id_vocab else id_vocab["<unk>"] for token in tokens]
     sentence_tensor = torch.LongTensor(numericalized).unsqueeze(1).to(device)
 
@@ -82,4 +80,6 @@ def translate_sentence(
     translated_sentence = " ".join(translated_tokens)
     
     return translated_sentence
+
+
 
