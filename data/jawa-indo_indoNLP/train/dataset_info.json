@@ -1,0 +1,28 @@
+{
+  "citation": "@misc{winata2022nusax,\n      title={NusaX: Multilingual Parallel Sentiment Dataset for 10 Indonesian Local Languages},\n      author={Winata, Genta Indra and Aji, Alham Fikri and Cahyawijaya,\n      Samuel and Mahendra, Rahmad and Koto, Fajri and Romadhony,\n      Ade and Kurniawan, Kemal and Moeljadi, David and Prasojo,\n      Radityo Eko and Fung, Pascale and Baldwin, Timothy and Lau,\n      Jey Han and Sennrich, Rico and Ruder, Sebastian},\n      year={2022},\n      eprint={2205.15960},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+  "description": "NusaX is a high-quality multilingual parallel corpus that covers 12 languages, Indonesian, English, and 10 Indonesian local languages, namely Acehnese, Balinese, Banjarese, Buginese, Madurese, Minangkabau, Javanese, Ngaju, Sundanese, and Toba Batak.\nNusaX-MT is a parallel corpus for training and benchmarking machine translation models across 10 Indonesian local languages + Indonesian and English. The data is presented in csv format with 12 columns, one column for each language.",
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_1": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_2": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_1_lang": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_2_lang": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "https://github.com/IndoNLP/nusax/tree/main/datasets/mt",
+  "license": "Creative Commons Attribution Share-Alike 4.0 International"
+}

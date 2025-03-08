@@ -1,0 +1,74 @@
+{
+  "builder_name": "nusa_x-mt",
+  "citation": "@misc{winata2022nusax,\n      title={NusaX: Multilingual Parallel Sentiment Dataset for 10 Indonesian Local Languages},\n      author={Winata, Genta Indra and Aji, Alham Fikri and Cahyawijaya,\n      Samuel and Mahendra, Rahmad and Koto, Fajri and Romadhony,\n      Ade and Kurniawan, Kemal and Moeljadi, David and Prasojo,\n      Radityo Eko and Fung, Pascale and Baldwin, Timothy and Lau,\n      Jey Han and Sennrich, Rico and Ruder, Sebastian},\n      year={2022},\n      eprint={2205.15960},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}\n",
+  "config_name": "jav-ind",
+  "dataset_name": "nusa_x-mt",
+  "dataset_size": 331040,
+  "description": "NusaX is a high-quality multilingual parallel corpus that covers 12 languages, Indonesian, English, and 10 Indonesian local languages, namely Acehnese, Balinese, Banjarese, Buginese, Madurese, Minangkabau, Javanese, Ngaju, Sundanese, and Toba Batak.\nNusaX-MT is a parallel corpus for training and benchmarking machine translation models across 10 Indonesian local languages + Indonesian and English. The data is presented in csv format with 12 columns, one column for each language.\n",
+  "download_checksums": {
+    "https://raw.githubusercontent.com/IndoNLP/nusax/main/datasets/mt/train.csv": {
+      "num_bytes": 935295,
+      "checksum": null
+    },
+    "https://raw.githubusercontent.com/IndoNLP/nusax/main/datasets/mt/valid.csv": {
+      "num_bytes": 184467,
+      "checksum": null
+    },
+    "https://raw.githubusercontent.com/IndoNLP/nusax/main/datasets/mt/test.csv": {
+      "num_bytes": 751242,
+      "checksum": null
+    }
+  },
+  "download_size": 1871004,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_1": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_2": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_1_lang": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_2_lang": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "https://github.com/IndoNLP/nusax/tree/main/datasets/mt",
+  "license": "Creative Commons Attribution Share-Alike 4.0 International",
+  "size_in_bytes": 2202044,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 165481,
+      "num_examples": 500,
+      "dataset_name": "nusa_x-mt"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 32550,
+      "num_examples": 100,
+      "dataset_name": "nusa_x-mt"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 133009,
+      "num_examples": 400,
+      "dataset_name": "nusa_x-mt"
+    }
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}

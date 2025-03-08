@@ -29,8 +29,8 @@ def preprocess_dataset(dataset, max_length=1000, lower=True, min_freq=1):
     special_tokens = [unk_token, pad_token, sos_token, eos_token]
 
     def tokenize_example(example):
-        en_text = example["indonesia"]  # Bahasa Indonesia
-        id_text = example["jawa"]  # Bahasa Jawa
+        en_text = example["text_1"]  # Bahasa Jawa
+        id_text = example["text_2"]  # Bahasa Indonesia
 
         if lower:
             en_text = en_text.lower()

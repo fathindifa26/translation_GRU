@@ -16,5 +16,5 @@ training:
   checkpoint_path: "checkpoints/gru_model.pt"
 
 data:
-  dataset_path: "../../data/indonesia_jawa_dataset"
+  dataset_path: "../../data/jawa-indo_indoNLP"
   pad_token: "<pad>"
