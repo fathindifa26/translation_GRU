@@ -2,11 +2,11 @@ model:
   input_dim: null  # Akan diisi secara dinamis berdasarkan vocab
   output_dim: null  # Akan diisi secara dinamis berdasarkan vocab
   embedding_dim: 256
-  hidden_dim: 512
+  hidden_dim: 64
   dropout: 0.2
 
 training:
-  batch_size: 32
+  batch_size: 8
   clip: 1.0
   teacher_forcing_initial: 0.5
   teacher_forcing_final: 0.1
